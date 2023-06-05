@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+  <html>
+      <head>
+            <title>event_signature</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://kit.fontawesome.com/39996071eb.js" crossorigin="anonymous"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+            <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                }
+                .navb {
+                width: 1500px;
+                display: flex;
+                justify-content: space-between;
+                }
+                nav {
+                width: 100%;
+                height: 55px;
+                display: flex;
+                justify-content: space-evenly;
+                background: rgb(255, 255, 255);
+                position: fixed;
+                z-index: 99999;
+                }
+                nav > a {
+                text-decoration: none;
+                text-align: center;
+                pointer-events: none;
+                color: black;
+                font-weight: bold;
+                }
+                .logo {
+                margin-top: 12.5px;
+                }
+    
+                ul, li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                }
+    
+                #main-menu > li {
+                float: left;
+                }
+    
+                #main-menu > li > a {
+                font-size: 18px;
+                color: rgba(0, 0, 0, 0.85);
+                text-align: center;
+                text-decoration: none;
+                letter-spacing: 0.05em;
+                display: block;
+                padding: 14px 36px;
+                font-weight: bold;
+                }
+                #main-menu > li:hover {
+                background-color: #52ace7b0;
+                transition-duration: 0.5s;
+                }
+                #sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.15s ease-in;
+                text-align: center;
+                }
+    
+                #sub-menu > li {
+                padding: 16px 18px;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);;
+                }
+    
+                #sub-menu > li >  a {
+                color: rgb(49, 49, 49);
+                text-decoration: none;
+                font-weight: bold;
+                }
+    
+                #main-menu > li:hover #sub-menu {
+                opacity: 1;
+                visibility: visible;
+                transition-duration: 0.2s;
+                }
+    
+                #sub-menu > li >  a:hover {
+                text-decoration: underline;
+                }
+                .navbar_link > li {
+                margin-top: 15px;
+                float: left;
+                padding: 15px;
+                margin-top: 0;
+                }
+                .navbar__toggleBtn {
+                display: none;
+                }
+                footer {
+                background-color: rgb(53, 54, 54);
+                font-size: 14px;
+                color: rgb(101, 104, 103);
+                text-align: center;
+                font-weight: bold;
+                }
+                footer > p {
+                    line-height: 2em;
+                }
+                /*본문*/
+                .event {
+                    padding-top:130px;
+                    text-decoration-line: none;
+                    width: 1100px;
+                    margin: auto;
+                    padding-bottom: 70px;
+                }
+                .event > h1 {
+                    font-size: 38px;
+                    font-weight: 700;
+                    padding-bottom: 10PX;
+                    text-align: center;  
+                }
+                .event > p {
+                    text-align: center;
+                    padding-bottom: 50px;
+                }
+                .contents {
+                    margin: auto;
+                    border-top: 3px solid #52ace7b0;
+                    height: auto;
+                    margin-bottom: 32px;
+                    border-bottom: 3px solid #52ace7b0;
+                    padding-bottom: 20px;   
+                }
+                .contents > .board_top {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 10px;
+                    padding-top: 20px;
+                    border-bottom: 1px solid rgba(139, 131, 131, 0.411);
+                    text-align: center;
+                }
+                .contents > .board {
+                    padding-bottom: 100px;
+                    padding-top: 100px;
+                    text-align: center;
+                }
+                .contents > .board > img {
+                    width: 1100px;
+                }
+                .event > .notbtn {
+                    width: 170px;
+                    line-height: 38px;
+                    margin-right: 0;
+                    text-align: center;
+                    border: 1px solid #d9d9d9;
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    float: right;
+                }
+                    
+                .event > .notbtn > a {
+                    text-decoration: none;
+                    color: rgb(107, 104, 104);
+                }    
+            </style>
+        </head>
+        <body>
+        <!--상단 메뉴바-->
+            <nav role="navigation">
+                <div class="navb">
+                    <div class="logo">
+                        <a href="Wwave.html"><img src="logo.png" alt="Wwave coffee"></a>
+                    </div>
+                    <ul id="main-menu">
+                        <li><a href="#">Wwave story</a>
+                            <ul id="sub-menu">
+                            <li><a href="#" aria-label="subemnu">브랜드</a></li>
+                            <li><a href="#" aria-label="subemnu">캠페인</a></li>
+                            <li><a href="#" aria-label="subemnu">매장찾기</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Menu</a>
+                        <ul id="sub-menu">
+                            <li><a href="#" aria-label="subemnu">커피</a></li>
+                            <li><a href="#" aria-label="subemnu">푸드</a></li>
+                            <li><a href="#" aria-label="subemnu">상품</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="membership.html">Wwave membership</a>
+                        <ul id="sub-menu">
+                            <li><a href="membership.html" aria-label="subemnu">멤버십 소개</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="notice.html">FAQ</a>
+                        <ul id="sub-menu">
+                            <li><a href="notice.html" aria-label="subemnu">공지사항</a></li>
+                            <li><a href="event.html" aria-label="subemnu">이벤트</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="signin.html">Log in</a></li>
+                    </ul>
+                    <ul class="navbar_link">
+                        <li><i class="fa-brands fa-square-instagram"></i></li>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                    </ul>
+                </div>
+            </nav>
+        <!--상단 메뉴바-->
+        <!--본문-->
+        <div class="event">
+            <h1>이벤트</h1>
+            <p>다양한 이벤트를 확인하고 참여해보세요.</p>
+            <div class="contents">
+                <div class="board_top">
+                    <p style="font-weight: bold;">Wwave 시그니처 커피 발매</p>
+                    <p style="color: rgba(139, 131, 131, 0.87);">2023.06.03</p>
+                </div>
+                <div class="board">
+                    <img src="event_01.jpg">
+                </div>
+            </div>
+            <div class="notbtn" onclick="location.href='event.html';">
+                <a href="event.html">목록보기</a>
+            </div>
+        </div>
+        <!--본문-->
+        </body>
+        <footer>
+            <p><br>대표이사 : 김정민 교수님.</p>
+		    <p>사업자등록번호 : 000-00-000000 주식회사 Wwave 대표이사 : 김정민교수님 TEL : 1234-5678 개인정보 책임자 : 김정민교수님 </p>
+		    <p> &copy; 2023 Wwave Coffee.com All Rights Reserved.</p> <br>
+        </footer>
+  </html>
