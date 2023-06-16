@@ -22,15 +22,15 @@
     </head>
     <body>
         <!--상단 메뉴바-->
-        <nav role="navigation">
+        <nav class="navigation">
             <div class="navb">
             <?php
             if(!$logged) {
             ?>
                 <div class="logo">
-                    <a href="index.html"><img src="logo.png" alt="Wwave coffee"></a>
+                    <a href="index.html"><img src="image/logo.png" alt="Wwave coffee"></a>
                 </div>
-                <ul id="main-menu">
+                <ul id="main-menu"  class="main-menu">
                     <li><a href="#">Wwave story</a>
                         <ul id="sub-menu">
                         <li><a href="brand.html" aria-label="subemnu">브랜드</a></li>
@@ -65,36 +65,39 @@
                     <li><i class="fa-brands fa-facebook"></i></li>
                     <li><i class="fa-brands fa-twitter"></i></li>
                 </ul>
-
+                <ul class="navbar__toggleBtn">
+                  <li><i id="toggleBtn" class="fa-sharp fa-solid fa-bars"></i></li>
+                </ul>
+            </div>
                 <?php } else { ?>
                 <div class="navb">
                 <div class="logo">
-                    <a href="index.php"><img src="logo.png" alt="Wwave coffee"></a>
+                    <a href="index.php"><img src="image/logo.png" alt="Wwave coffee"></a>
                 </div>
-                <ul id="main-menu">
+                <ul id="main-menu"  class="main-menu">
                     <li><a href="#">Wwave story</a>
                         <ul id="sub-menu">
-                            <li><a href="brand.html" aria-label="subemnu">브랜드</a></li>
-                            <li><a href="campaign.html" aria-label="subemnu">캠페인</a></li>
-                            <li><a href="store.html" aria-label="subemnu">매장찾기</a></li>
+                            <li><a href="brand.php" aria-label="subemnu">브랜드</a></li>
+                            <li><a href="campaign.php" aria-label="subemnu">캠페인</a></li>
+                            <li><a href="store.php" aria-label="subemnu">매장찾기</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Menu</a>
                         <ul id="sub-menu">
-                            <li><a href="drinks.html" aria-label="subemnu">커피</a></li>
-                            <li><a href="foods.html" aria-label="subemnu">푸드</a></li>
-                            <li><a href="product.html" aria-label="subemnu">상품</a></li>
+                            <li><a href="drinks.php" aria-label="subemnu">커피</a></li>
+                            <li><a href="foods.php" aria-label="subemnu">푸드</a></li>
+                            <li><a href="product.php" aria-label="subemnu">상품</a></li>
                         </ul>
                     </li>
-                    <li><a href="membership.html">Wwave membership</a>
+                    <li><a href="membership.php">Wwave membership</a>
                         <ul id="sub-menu">
-                            <li><a href="membership.html" aria-label="subemnu">멤버십 소개</a></li>
+                            <li><a href="membership.php" aria-label="subemnu">멤버십 소개</a></li>
                         </ul>
                     </li>
-                    <li><a href="notice.html">FAQ</a>
+                    <li><a href="notice.php">FAQ</a>
                         <ul id="sub-menu">
-                            <li><a href="notice.html" aria-label="subemnu">공지사항</a></li>
-                            <li><a href="event.html" aria-label="subemnu">이벤트</a></li>
+                            <li><a href="notice.php" aria-label="subemnu">공지사항</a></li>
+                            <li><a href="event.php" aria-label="subemnu">이벤트</a></li>
                         </ul>
                     </li>
                     <li><a href="mypage.php"><?=$name?>님</a>
@@ -108,6 +111,9 @@
                     <li><i class="fa-brands fa-square-instagram"></i></li>
                     <li><i class="fa-brands fa-facebook"></i></li>
                     <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+                <ul class="navbar__toggleBtn">
+                  <li><i id="toggleBtn" class="fa-sharp fa-solid fa-bars"></i></li>
                 </ul>
                 <?php } ?>
             </div>
@@ -125,7 +131,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="event_02.jpg" alt="" class="d-block" style="width:100%; height:1000px" >
+                        <img src="image/event_02.jpg" alt="" class="d-block" style="width:100%; height:1200px" >
                         <div class="carousel-caption">
                             <div class="menu_btn">
                             <a href="#">메뉴 더보기</a>
@@ -133,10 +139,10 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="002.png" alt="" class="d-block" style="width:100%; height:1000px">
+                        <img src="image/002.png" alt="" class="d-block" style="width:100%; height:1200px">
                     </div>
                     <div class="carousel-item">
-                        <img src="001.png" alt="" class="d-block" style="width:100%; height:1000px">
+                        <img src="image/001.png" alt="" class="d-block" style="width:100%; height:1200px">
                     </div>
                 </div>
             </div>
@@ -146,7 +152,7 @@
         <section>
             <div class="section_2">
                 <div class="sec2_img">
-                    <img src="store-001.png">
+                    <img src="image/store-001.png">
                 </div>
                 <div class="sec2_txt">
                     <h1><strong>Wwave</strong></h1><br>
@@ -170,10 +176,10 @@
                   <div class="cont">
                     <ul>
                       <li>
-                        <a href="event_signature.html">
+                        <a href="event_signature.php">
                           <div class="box">
                             <div class="img">
-                              <img src="event_03.jpg">
+                              <img src="image/event_03.jpg">
                             </div>
                             <div class="txt">
                               <div class="txt_wrap">
@@ -187,10 +193,10 @@
                         </a>
                       </li>
                       <li>
-                        <a href="event_swim.html">
+                        <a href="event_swim.php">
                           <div class="box">
                             <div class="img">
-                              <img src="swim_01.png">
+                              <img src="image/swim_01.png">
                             </div>
                             <div class="txt">
                               <div class="txt_wrap">
@@ -204,10 +210,10 @@
                         </a>
                       </li>
                       <li>
-                        <a href="event_mem.html">
+                        <a href="event_mem.php">
                           <div class="box">
                             <div class="img">
-                              <img src="텀블러_01.png">
+                              <img src="image/텀블러_01.png">
                             </div>
                             <div class="txt">
                               <div class="txt_wrap">
@@ -223,13 +229,21 @@
                     </ul>
                   </div>
                   <div  class="event">
-                    <a href="event.html">이벤트 더보기</a>
+                    <a href="event.php">이벤트 더보기</a>
                   </div>
                 </div>
             </div>
         </section>
         <!--섹션3-->
     <!--본문-->
+    <!--반응형 웹 스크립트-->
+    <script>
+    document.getElementById('toggleBtn').addEventListener('click', function () {
+    var menu = document.getElementById('main-menu');
+    menu.classList.toggle('show');
+    });
+    </script>
+    <!--반응형 웹 스크립트-->
     </body>
     <footer>
         <p><br>대표이사 : 김정민 교수님.</p>

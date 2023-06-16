@@ -6,21 +6,25 @@
         $name = $_SESSION['name'];
         $logged = true;
     }
-?> 
+?>  
 <!DOCTYPE html>
-<!-- code 0610-->
-<html>
-    <head>
-        <title>Wwave coffee</title>
+<!--------------------------------
+      FILE: event.html
+      이벤트 메인 페이지
+      23.06.07
+-->
+  <html>
+      <head>
+        <title>event</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/39996071eb.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="signmodify.css">
-    </head>
-    <body>
+        <link rel="stylesheet" href="event.css">
+      </head>
+      <body>
         <!--상단 메뉴바-->
         <nav class="navigation">
                 <div class="navb">
@@ -70,66 +74,85 @@
                 </ul>
                 </div>
             </nav>
-        <!--회원정보 수정-->
-        <div class="signmodify">
-            <h1>회원정보 수정</h1><br>
-            <hr>
-            <?php
-            include_once('dbconn.php');
-            $email = $_SESSION['email'];
-            $sql = "select * from member where email = '$email'";
-            $result = $conn->query($sql);
-            if($result->num_rows > 0) {
-                $row = $result->fetch_row();
-            }   
-             ?>
-            <div class="container">
-                <form action="signmodproc.php" method="post">
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">이메일 아이디<strong style="color:#0044ff;">*</strong></label>
-                        <input type="email" id="form2Example1" class="form-control" name="email"  value="<?= $row[0] ?>" readonly/>
+      <!--상단 메뉴바-->
+      <!--이벤트-->
+      <div class="main">
+        <h1>이벤트</h1>
+        <p>다양한 이벤트를 확인하고 참여해보세요.</p>
+        <div class="contents">
+          <div class="cont">
+            <ul>
+              <li>
+                <a href="event_signature.php">
+                  <div class="box">
+                    <div class="img">
+                      <img src="image/event_03.jpg">
                     </div>
-                    <!-- 이름 -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">이름<strong style="color:#0044ff;">*</strong></label>
-                        <input type="uname" id="form2Example1" class="form-control" name="name" value ="<?= $row[1] ?>"/>
+                    <div class="txt">
+                      <div class="txt_wrap">
+                        Wwave 시그니처 커피 발매
+                      </div>
+                      <div class="txt_date">
+                        2023.06.03
+                      </div>
                     </div>
-
-                    <!-- 비밀번호 -->
-                    <div class="passwordreset mb-4">
-                        <a href="passwordreset.php"> 비밀번호 변경  ></a>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="event_swim.php">
+                  <div class="box">
+                    <div class="img">
+                      <img src="image/swim_01.png">
                     </div>
-
-                    <!-- 전화번호 -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">휴대폰<strong style="color:#0044ff;">*</strong></label>
-                        <input type="telno" id="form2Example1" class="form-control" name="telno" value ="<?= $row[3] ?>"/>
+                    <div class="txt">
+                      <div class="txt_wrap">
+                        Wwave swimming event
+                      </div>
+                      <div class="txt_date">
+                        2023.06.03
+                      </div>
                     </div>
-
-                    <!-- submit -->
-                    <div style="text-align: center; margin-top: 40px;">
-                    <button type="submit" class="btn btn-primary mb-3">확인</button>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="event_mem.php">
+                  <div class="box">
+                    <div class="img">
+                      <img src="image/텀블러_01.png">
                     </div>
-
-                    <!--회원탈퇴-->
-                    <div class="signdel" style="text-align: center; margin-top: 40px;">
-                        <a href="signdel.php">회원탈퇴</a>
+                    <div class="txt">
+                      <div class="txt_wrap">
+                        Join Wwave membership
+                      </div>
+                      <div class="txt_date">
+                        2023.06.03
+                      </div>
                     </div>
-                </form>
-            </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-<!--반응형 웹 스크립트-->
-<script>
+
+      </div>
+      <!--이벤트-->
+      <!--반응형 웹 스크립트-->
+    <script>
     document.getElementById('toggleBtn').addEventListener('click', function () {
     var menu = document.getElementById('main-menu');
     menu.classList.toggle('show');
     });
     </script>
     <!--반응형 웹 스크립트-->
-    </body>
-    <footer>
+      </body>
+      <footer>
         <p><br>대표이사 : 김정민 교수님.</p>
-		<p>사업자등록번호 : 000-00-000000 주식회사 Wwave 대표이사 : 김정민교수님 TEL : 1234-5678 개인정보 책임자 : 김정민교수님 </p>
-		<p> &copy; 2023 Wwave Coffee.com All Rights Reserved.</p> <br>
-    </footer>
-</html>
+		    <p>사업자등록번호 : 000-00-000000 주식회사 Wwave 대표이사 : 김정민교수님 TEL : 1234-5678 개인정보 책임자 : 김정민교수님 </p>
+		    <p> &copy; 2023 Wwave Coffee.com All Rights Reserved.</p> <br>
+      </footer>
+  </html>
+
+    

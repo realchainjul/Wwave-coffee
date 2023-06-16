@@ -258,3 +258,63 @@ ul, li {
       transition: background-color .5s, color .5s;
   }
   /*섹션3*/
+  /*반응형*/
+  @media (max-width: 1500px) {
+    .logo {
+      text-align: left;
+      margin-right: auto;
+      padding-left: 50px;
+  }
+  .navb ul#main-menu li{
+    float: none;
+  }
+  .main-menu {
+      display: none;
+      position: fixed;
+      top: 55px;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      z-index: 999;
+      align-items: center;
+  }
+
+  .main-menu.show {
+      display: block;
+  }
+
+  .main-menu li {
+      text-align: center;
+  }
+
+  .main-menu li a {
+      display: block;
+      padding: 14px 36px;
+  }
+
+  .main-menu #sub-menu {
+      display: none;
+  }
+
+  .main-menu li:hover #sub-menu {
+      display: block;
+      position: static;
+      background-color: transparent;
+      transition-duration: 0.4s;
+  }
+  .navbar_link {
+      display: none;
+      text-align: center;
+  }
+
+  .navbar__toggleBtn {
+      display: block;
+      padding-right: 60px;
+      padding-top: 10px;
+      
+  }
+
+  .navbar__toggleBtn li {
+      margin-top: 5px;
+  }
+}
