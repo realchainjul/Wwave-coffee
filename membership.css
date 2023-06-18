@@ -178,7 +178,6 @@
             display: flex;
             justify-content: space-evenly; 
             margin: auto;
-            width: 1200px;
             padding: 40px;
         }
         .guide_wrap > .gg {
@@ -250,6 +249,15 @@
             
               .navbar__toggleBtn li {
                   margin-top: 5px;
+              }
+              .cotn {
+                display:block;
+              }
+              .info_box:nth-child(1) {
+                margin-left: 32px;
+              }
+              .guide_wrap {
+                display: block;
               }
             }
         

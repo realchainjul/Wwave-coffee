@@ -1,11 +1,6 @@
 <?php
-# 회원가입 처리 PHP 파일
-# 1) 데이터베이스 연결
-# 2) 회원가입 데이터 읽어오기
-# 3) INSERT SQL 명령문 작성하기 
-# 4) SQL 실행하고 결과 확인하기
 include_once('dbconn.php'); 
-$email = $_POST['email']; #post = html보면 method가 post다
+$email = $_POST['email']; 
 $name = $_POST['name'];
 $pwd = $_POST['pwd'];
 $telno = $_POST['telno'];
